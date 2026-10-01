@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gourav Nirankari — Computer Science & AI student, developer and product builder in Bengaluru.">
+  <meta name="theme-color" content="#050505">
+  <title>Gourav Nirankari — Build. Break. Repeat.</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink:'#050505', gold:'#e2bd70', paper:'#f4efe5' },
+          fontFamily: {
+            sans:['Manrope','ui-sans-serif','system-ui','sans-serif'],
+            mono:['DM Mono','ui-monospace','monospace'],
+            display:['Georgia','Times New Roman','serif']
+          },
+          boxShadow:{ gold:'0 0 45px rgba(226,189,112,.13)' }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-ink text-paper antialiased">
+  <div class="noise" aria-hidden="true"></div>
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+  <div id="cursor-dot" aria-hidden="true"></div>
+
+  <!-- Mobile navigation uses a CSS-only checkbox; no JavaScript required. -->
+  <input id="mobile-menu" type="checkbox" class="peer sr-only" aria-label="Open navigation">
+  <header class="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-4">
+    <nav class="liquid-glass mx-auto flex max-w-7xl items-center justify-between rounded-full px-3 py-2.5 sm:px-5">
+      <a href="#top" class="group flex items-center gap-3" aria-label="Gourav Nirankari home">
+        <span class="grid h-9 w-9 place-items-center rounded-full border border-gold/50 text-[11px] font-bold text-gold transition duration-500 group-hover:rotate-[360deg] group-hover:bg-gold group-hover:text-ink">GN</span>
+        <span class="hidden text-xs font-semibold tracking-[0.16em] text-white sm:inline">GOURAV NIRANKARI</span>
+      </a>
+
+      <div class="hidden items-center gap-6 text-[10px] uppercase tracking-[0.18em] text-white/50 md:flex">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#coding">Coding</a>
+        <a class="nav-link" href="#journey">Journey</a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <label for="contact-toggle" class="hidden cursor-pointer rounded-full border border-gold/60 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-gold transition duration-300 hover:-translate-y-0.5 hover:bg-gold hover:text-ink sm:inline-flex">Let’s talk</label>
+        <label for="mobile-menu" class="grid h-9 w-9 cursor-pointer place-items-center rounded-full border border-white/10 text-white/70 transition hover:border-gold/40 hover:text-gold md:hidden" aria-label="Open menu">
+          <span class="space-y-1"><i class="block h-px w-4 bg-current"></i><i class="block h-px w-4 bg-current"></i><i class="block h-px w-4 bg-current"></i></span>
+        </label>
+      </div>
+    </nav>
+
+    <div class="mobile-panel liquid-glass mx-auto mt-2 max-w-7xl rounded-3xl p-3 md:hidden">
+      <div class="grid gap-1 text-center text-xs uppercase tracking-[.18em] text-white/60">
+        <a href="#about" class="rounded-2xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">About</a>
+        <a href="#skills" class="rounded-2xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Skills</a>
+        <a href="#work" class="rounded-2xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Work</a>
+        <a href="#coding" class="rounded-2xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Coding</a>
+        <a href="#journey" class="rounded-2xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Journey</a>
+        <label for="contact-toggle" class="cursor-pointer rounded-2xl bg-gold px-4 py-3 font-semibold text-ink">Let’s talk</label>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="relative min-h-screen overflow-hidden px-5 pb-16 pt-32 sm:px-8 lg:px-12 lg:pt-36">
+      <div class="hero-grid absolute inset-0 -z-10" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
+
+      <div class="mx-auto grid min-h-[calc(100vh-8rem)] max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
+        <div class="scroll-slide-left">
+          <div class="mb-7 flex flex-wrap items-center gap-3 font-mono text-[9px] uppercase tracking-[0.22em] text-white/45 sm:text-xs">
+            <span class="status-dot"></span><span>20 / Bengaluru / India</span><span class="text-gold/60">•</span><span>Building in public</span>
+          </div>
+
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-gold sm:text-sm">Computer Science & AI · Developer</p>
+          <h1 class="max-w-5xl text-[clamp(3.9rem,11vw,9rem)] font-semibold leading-[.79] tracking-[-0.07em] text-white">
+            GOURAV
+            <span class="block font-display font-normal italic text-white/55">NIRANKARI</span>
+          </h1>
+
+          <div class="mt-8 max-w-2xl text-base leading-8 text-white/55 sm:text-lg">
+            <span class="text-white">I want to understand how things work — then build something with that understanding.</span>
+            <span class="block mt-2">Curious about AI, startups, AR/VR, robotics, games and the next idea worth turning into a product.</span>
+          </div>
+
+          <div class="mt-9 flex flex-wrap gap-3">
+            <a href="#work" class="magnetic-btn group inline-flex items-center gap-3 rounded-full bg-gold px-6 py-3 text-sm font-bold text-ink transition duration-500 hover:-translate-y-1 hover:shadow-gold">Explore my work <span class="transition duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span></a>
+            <a href="https://github.com/GouravNirankari" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[.03] px-6 py-3 text-sm font-semibold text-white transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:bg-gold/[.06] hover:text-gold">GitHub <span>↗</span></a>
+          </div>
+
+          <div class="mt-10 flex flex-wrap gap-2 font-mono text-[9px] uppercase tracking-[0.18em] text-white/35 sm:text-[10px]">
+            <span class="pill">AI</span><span class="pill">AR / VR</span><span class="pill">Startups</span><span class="pill">Web</span><span class="pill">Robotics</span>
+          </div>
+        </div>
+
+        <div class="scroll-slide-right mx-auto w-full max-w-md">
+          <div class="relative">
+            <div class="absolute -inset-8 rounded-[3rem] border border-gold/10 opacity-70 animate-[pulse_5s_ease-in-out_infinite]"></div>
+            <div class="absolute -inset-16 rounded-[4rem] border border-white/5 opacity-50"></div>
+
+            <div class="profile-frame relative overflow-hidden rounded-[2rem] border border-white/15 bg-[#0b0b0a] p-2">
+              <div class="absolute left-5 top-5 z-10 rounded-full border border-white/15 bg-black/55 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.2em] text-white/60 backdrop-blur-xl">Builder / 01</div>
+              <img src="profile.jpg" alt="Portrait of Gourav Nirankari" class="h-[30rem] w-full rounded-[1.55rem] object-cover object-center transition duration-1000 hover:scale-[1.035] sm:h-[35rem]">
+              <div class="absolute inset-x-5 bottom-5 rounded-2xl border border-white/10 bg-black/55 p-4 backdrop-blur-2xl">
+                <div class="flex items-end justify-between gap-4">
+                  <div><p class="font-mono text-[9px] uppercase tracking-[.2em] text-gold">01 — Curiosity</p><p class="mt-1 text-sm text-white">Question → Code → Product</p></div>
+                  <span class="animate-[spin_7s_linear_infinite] text-2xl text-white/50">✦</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Separate status block fixes the previous overlap. -->
+            <div class="liquid-glass mt-3 grid grid-cols-3 rounded-2xl p-3 text-center">
+              <div><p class="font-mono text-[8px] uppercase tracking-wider text-white/30">Learn</p><p class="mt-1 text-[11px] font-semibold text-white">Understand</p></div>
+              <div class="border-x border-white/10"><p class="font-mono text-[8px] uppercase tracking-wider text-white/30">Build</p><p class="mt-1 text-[11px] font-semibold text-white">Experiment</p></div>
+              <div><p class="font-mono text-[8px] uppercase tracking-wider text-white/30">Repeat</p><p class="mt-1 text-[11px] font-semibold text-gold">Ship</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="absolute bottom-6 left-1/2 hidden -translate-x-1/2 items-center gap-3 font-mono text-[9px] uppercase tracking-[0.25em] text-white/30 transition hover:text-gold sm:flex"><span class="h-12 w-px animate-pulse bg-gradient-to-b from-transparent via-gold/60 to-transparent"></span>Scroll to explore</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="border-t border-white/10 px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.7fr_1.3fr]">
+        <div class="scroll-slide-left"><p class="eyebrow">02 — About</p><h2 class="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">Curious by default.</h2></div>
+        <div class="scroll-slide-right">
+          <p class="max-w-4xl text-2xl leading-[1.35] tracking-tight text-white/80 sm:text-3xl lg:text-4xl">I’m a Computer Science & AI student at Scaler School of Technology, exploring software, products and the ideas sitting between technology and imagination.</p>
+          <p class="mt-7 max-w-3xl text-base leading-8 text-white/45">I don’t want to only solve coding problems. I want to understand why things work, build products around real problems, and eventually create something of my own. Right now that means learning across web development, programming, AI, robotics, AR/VR and whatever sparks the next question.</p>
+          <div class="mt-10 grid gap-4 sm:grid-cols-3">
+            <div class="stat-card scroll-reveal"><span class="stat-number">20</span><span class="stat-label">Years old</span></div>
+            <div class="stat-card scroll-reveal"><span class="stat-number">01</span><span class="stat-label">Year into the journey</span></div>
+            <div class="stat-card scroll-reveal"><span class="stat-number">∞</span><span class="stat-label">Questions to explore</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end scroll-reveal">
+          <div><p class="eyebrow">03 — Toolkit</p><h2 class="mt-5 max-w-2xl text-4xl font-semibold tracking-tight text-white sm:text-6xl">Learning the tools.<br><span class="font-display font-normal italic text-white/45">Not collecting labels.</span></h2></div>
+          <p class="max-w-sm text-sm leading-7 text-white/40">A snapshot of what I’m using and learning right now. The list gets longer by building, not by pretending.</p>
+        </div>
+
+        <div class="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div class="skill-card scroll-reveal lg:col-span-2"><div class="flex items-start justify-between"><div><p class="skill-index">01</p><h3 class="mt-4 text-2xl font-semibold text-white">Code</h3></div><span class="skill-symbol">&lt;/&gt;</span></div><div class="mt-10 flex flex-wrap gap-2"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">Java</span><span class="pill">C++</span></div></div>
+          <div class="skill-card scroll-reveal"><p class="skill-index">02</p><h3 class="mt-4 text-2xl font-semibold text-white">Workflow</h3><div class="mt-10 flex flex-wrap gap-2"><span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">Linux</span><span class="pill">WSL</span></div></div>
+          <div class="skill-card scroll-reveal"><p class="skill-index">03</p><h3 class="mt-4 text-2xl font-semibold text-white">Create</h3><div class="mt-10 flex flex-wrap gap-2"><span class="pill">Figma</span><span class="pill">Canva</span><span class="pill">Premiere Pro</span><span class="pill">CapCut</span></div></div>
+          <div class="skill-card scroll-reveal lg:col-span-2"><p class="skill-index">04</p><div class="mt-4 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between"><div><h3 class="text-2xl font-semibold text-white">Currently exploring</h3><p class="mt-2 max-w-lg text-sm leading-7 text-white/40">AI · Robotics · AR/VR · Web3 · Game Development · Product Building</p></div><div class="learning-orbit" aria-hidden="true"><span></span><span></span><span></span></div></div></div>
+          <div class="skill-card scroll-reveal lg:col-span-2"><p class="skill-index">05</p><h3 class="mt-4 text-2xl font-semibold text-white">How I learn</h3><p class="mt-6 max-w-xl text-sm leading-7 text-white/45">Question → understand → build → break → debug → repeat. I care more about understanding the mechanism than memorising the syntax.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="border-y border-white/10 bg-white/[.015] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between scroll-reveal"><div><p class="eyebrow">04 — Selected work</p><h2 class="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-6xl">One real problem.<br><span class="font-display font-normal italic text-gold">One real build.</span></h2></div><span class="rounded-full border border-white/10 px-4 py-2 font-mono text-[9px] uppercase tracking-[0.2em] text-white/35">Gradient Rush / 2026</span></div>
+
+        <article class="project-card scroll-reveal mt-14 overflow-hidden rounded-[2rem] border border-white/10">
+          <div class="grid lg:grid-cols-[1.1fr_.9fr]">
+            <div class="project-visual relative min-h-[27rem] overflow-hidden border-b border-white/10 lg:border-b-0 lg:border-r">
+              <div class="absolute inset-0 opacity-60" aria-hidden="true"><div class="feed-line line-1"></div><div class="feed-line line-2"></div><div class="feed-line line-3"></div></div>
+              <div class="relative flex h-full min-h-[27rem] items-center justify-center p-7 sm:p-12">
+                <div class="feed-window w-full max-w-xl">
+                  <div class="flex items-center justify-between border-b border-white/10 px-4 py-3"><div class="flex gap-1.5"><i></i><i></i><i></i></div><span class="font-mono text-[9px] uppercase tracking-[.2em] text-white/35">Campus Feed</span><span class="font-mono text-[9px] text-gold">LIVE</span></div>
+                  <div class="grid grid-cols-[.65fr_1.35fr]"><aside class="hidden border-r border-white/10 p-4 sm:block"><p class="font-mono text-[9px] uppercase tracking-[.2em] text-white/30">Interests</p><div class="mt-5 space-y-3"><span class="feed-mini active"></span><span class="feed-mini"></span><span class="feed-mini"></span><span class="feed-mini short"></span></div></aside><div class="p-4"><div class="mb-4 flex items-center justify-between"><span class="text-xs font-medium text-white/75">For you</span><span class="rounded-full bg-gold/10 px-2 py-1 font-mono text-[8px] uppercase tracking-[.15em] text-gold">Relevant</span></div><div class="space-y-3"><div class="feed-post"><b>Yugaantar</b><span>Registration deadline · 2d</span></div><div class="feed-post"><b>Hackathon</b><span>Build your team · 5h</span></div><div class="feed-post"><b>Workshop</b><span>New announcement · 1h</span></div></div></div></div>
+                </div>
+              </div>
+              <span class="absolute bottom-5 left-5 rounded-full border border-white/10 bg-black/50 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[.2em] text-white/45 backdrop-blur">Concept preview</span>
+            </div>
+
+            <div class="flex flex-col justify-between p-7 sm:p-10 lg:p-12"><div><p class="font-mono text-xs uppercase tracking-[.25em] text-gold">Campus Feed</p><h3 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">The antidote to announcement chaos.</h3><p class="mt-6 text-sm leading-7 text-white/45">A central platform for Scaler students that replaces the endless WhatsApp-group hunt with relevant announcements, deadlines and event information in one place.</p><div class="mt-8 space-y-4 border-l border-gold/30 pl-5"><div><p class="text-xs font-semibold uppercase tracking-[.15em] text-white/70">The problem</p><p class="mt-1 text-sm leading-6 text-white/40">Important messages were getting buried across separate groups, causing students to miss deadlines and announcements.</p></div><div><p class="text-xs font-semibold uppercase tracking-[.15em] text-white/70">The idea</p><p class="mt-1 text-sm leading-6 text-white/40">Personalised relevance, event/team features and a single information layer for campus life.</p></div></div></div><div class="mt-10"><div class="flex flex-wrap gap-2"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span><span class="pill">Gemini API</span><span class="pill">Vercel</span></div><div class="mt-7 flex flex-wrap items-center gap-5"><a href="https://github.com/aaryanghadge/Campus-Feed" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 text-sm font-semibold text-gold transition hover:text-white">View on GitHub <span class="transition group-hover:translate-x-1">↗</span></a><span class="font-mono text-[10px] text-white/25">Live demo currently offline</span></div></div></div>
+          </div>
+        </article>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-3"><div class="mini-card scroll-reveal md:col-span-2"><p class="eyebrow">What I want to build next</p><p class="mt-5 max-w-2xl text-2xl leading-tight text-white/75 sm:text-3xl">Products that feel obvious after you use them — but weren’t obvious before someone built them.</p></div><div class="mini-card scroll-reveal flex flex-col justify-between"><span class="animate-[spin_10s_linear_infinite] text-4xl text-gold/70">✦</span><p class="mt-8 text-sm leading-6 text-white/40">More projects are coming as I keep turning coursework, hackathons and random ideas into actual builds.</p></div></div>
+      </div>
+    </section>
+
+    <!-- CODING: live external stat cards -->
+    <section id="coding" class="px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <div class="mx-auto max-w-7xl">
+        <div class="scroll-reveal"><p class="eyebrow">05 — Coding</p><h2 class="mt-5 max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-6xl">Progress you can actually <span class="font-display font-normal italic text-gold">check.</span></h2><p class="mt-5 max-w-2xl text-sm leading-7 text-white/40">These cards are generated from the public profiles, so the numbers can change as I solve more problems.</p></div>
+        <div class="mt-12 grid gap-5 lg:grid-cols-2">
+          <a href="https://codeforces.com/profile/Gourav_Nirankari" target="_blank" rel="noopener noreferrer" class="liquid-glass scroll-slide-left group rounded-[1.5rem] p-5 transition duration-700 hover:-translate-y-2 hover:border-gold/30">
+            <div class="mb-4 flex items-center justify-between"><div><p class="font-mono text-[9px] uppercase tracking-[.2em] text-white/35">Codeforces</p><p class="mt-1 text-lg font-semibold text-white">Competitive programming</p></div><span class="text-gold transition duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span></div>
+            <div class="overflow-hidden rounded-xl border border-white/10 bg-black/30 p-2"><img src="https://codeforces-readme-stats.vercel.app/api/card?username=Gourav_Nirankari&theme=github_dark&animation=true" alt="Live Codeforces statistics for Gourav Nirankari" class="h-auto w-full" loading="lazy"></div>
+          </a>
+          <a href="https://leetcode.com/u/Gourav_Nirankari/" target="_blank" rel="noopener noreferrer" class="liquid-glass scroll-slide-right group rounded-[1.5rem] p-5 transition duration-700 hover:-translate-y-2 hover:border-gold/30">
+            <div class="mb-4 flex items-center justify-between"><div><p class="font-mono text-[9px] uppercase tracking-[.2em] text-white/35">LeetCode</p><p class="mt-1 text-lg font-semibold text-white">Problem solving</p></div><span class="text-gold transition duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span></div>
+            <div class="overflow-hidden rounded-xl border border-white/10 bg-black/30 p-2"><img src="https://leetcard.jacoblin.cool/Gourav_Nirankari?theme=dark&ext=activity&animation=true&cache=60" alt="Live LeetCode statistics for Gourav Nirankari" class="h-auto w-full" loading="lazy"></div>
+          </a>
+        </div>
+        <p class="mt-5 font-mono text-[9px] uppercase tracking-[.16em] text-white/25">Live cards are supplied by third-party stat services; cache time may delay a newly solved problem.</p>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section id="journey" class="border-y border-white/10 bg-white/[.015] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <div class="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.75fr_1.25fr]"><div class="scroll-slide-left"><p class="eyebrow">06 — Journey</p><h2 class="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-6xl">Still early.<br><span class="font-display font-normal italic text-white/40">That’s the point.</span></h2><p class="mt-6 max-w-md text-sm leading-7 text-white/40">I’m not presenting a finished career. I’m documenting the beginning of one.</p></div><div class="timeline scroll-slide-right"><div class="timeline-item"><span class="timeline-dot"></span><p class="timeline-year">2026 — Present</p><h3 class="mt-2 text-2xl font-semibold text-white">Scaler School of Technology</h3><p class="mt-2 text-sm leading-7 text-white/40">Computer Science & AI · B.Sc. (Hons.) Computer Science, BITS Pilani</p></div><div class="timeline-item"><span class="timeline-dot"></span><p class="timeline-year">2026</p><h3 class="mt-2 text-2xl font-semibold text-white">Gradient Rush Hackathon</h3><p class="mt-2 text-sm leading-7 text-white/40">Built Campus Feed with a team to solve a real campus communication problem.</p></div><div class="timeline-item"><span class="timeline-dot"></span><p class="timeline-year">2026</p><h3 class="mt-2 text-2xl font-semibold text-white">Beyond the classroom</h3><p class="mt-2 text-sm leading-7 text-white/40">Yugaantar sponsorship team · campus shoot selection · CP events and workshops · coding contests.</p></div><div class="timeline-item"><span class="timeline-dot"></span><p class="timeline-year">Before college</p><h3 class="mt-2 text-2xl font-semibold text-white">DPS Sagar, Madhya Pradesh</h3><p class="mt-2 text-sm leading-7 text-white/40">89.8% in Class 10 · 82.8% in PCM in Class 12 · International Mathematics Olympiad participation · Yellow House Captain.</p></div></div></div>
+    </section>
+
+    <!-- CURIOSITY -->
+    <section class="px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <div class="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[1.1fr_.9fr]">
+        <div class="mini-card scroll-slide-left min-h-[22rem] overflow-hidden"><div class="flex items-start justify-between"><div><p class="eyebrow">07 — Curiosity map</p><h2 class="mt-5 text-3xl font-semibold text-white">Things I keep coming back to.</h2></div><span class="animate-pulse text-3xl text-gold/70">∞</span></div><div class="mt-12 flex flex-wrap gap-3"><span class="interest interest-big">AI</span><span class="interest">AR / VR</span><span class="interest">Robotics</span><span class="interest">Startups</span><span class="interest interest-big">Product</span><span class="interest">Game Dev</span><span class="interest">Web3</span><span class="interest">Web</span><span class="interest">Design</span><span class="interest">Music</span></div></div>
+        <div class="mini-card scroll-slide-right"><p class="eyebrow">08 — The idea</p><h2 class="mt-5 text-3xl font-semibold text-white">I want to build products, not just solve problems.</h2><p class="mt-6 text-sm leading-7 text-white/45">That means learning the fundamentals, understanding the mechanism underneath them, and then using them to make something people can actually interact with.</p><div class="mt-9 rounded-2xl border border-gold/15 bg-gold/[.035] p-5"><p class="font-mono text-[9px] uppercase tracking-[.18em] text-gold">Current loop</p><p class="mt-3 text-lg text-white">Question → Understand → Build → Break → Debug → Ship</p></div></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="relative overflow-hidden border-t border-white/10 px-5 py-28 sm:px-8 lg:px-12 lg:py-40">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-5xl text-center scroll-reveal"><p class="eyebrow">09 — Contact</p><h2 class="mt-7 text-[clamp(3.5rem,9vw,8rem)] font-semibold leading-[.88] tracking-[-.06em] text-white">HAVE AN IDEA?<span class="block font-display font-normal italic text-gold">LET’S BUILD.</span></h2><p class="mx-auto mt-8 max-w-xl text-base leading-8 text-white/45">Building something interesting, want to collaborate, or simply want to talk tech? Drop me a message.</p><label for="contact-toggle" class="magnetic-btn mt-10 inline-flex cursor-pointer items-center gap-3 rounded-full bg-gold px-7 py-3.5 text-sm font-bold text-ink transition duration-500 hover:-translate-y-1 hover:shadow-gold">Open message form <span>↗</span></label></div>
+    </section>
+  </main>
+
+  <!-- CONTACT MODAL. FormSubmit sends the submitted fields to Gourav's email without requiring JavaScript. -->
+  <input id="contact-toggle" type="checkbox" class="contact-toggle" aria-hidden="true">
+  <div class="contact-modal">
+    <div class="contact-panel liquid-glass rounded-[1.75rem] p-5 sm:p-7">
+      <div class="flex items-start justify-between gap-5"><div><p class="eyebrow">Direct message</p><h2 class="mt-2 text-3xl font-semibold text-white">Let’s talk.</h2></div><label for="contact-toggle" class="grid h-9 w-9 cursor-pointer place-items-center rounded-full border border-white/10 text-white/50 transition hover:border-gold/40 hover:text-gold" aria-label="Close message form">×</label></div>
+      <p class="mt-3 text-sm leading-6 text-white/40">Fill this out and the message will be sent to <span class="text-white/70">gouravnirankari4@gmail.com</span> through the form service.</p>
+      <form action="https://formsubmit.co/gouravnirankari4@gmail.com" method="POST" class="mt-7 grid gap-5">
+        <input type="hidden" name="_subject" value="New portfolio message for Gourav Nirankari">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off">
+        <div class="grid gap-5 sm:grid-cols-2"><div class="input-wrap"><label class="input-label" for="name">Name</label><input id="name" name="name" required autocomplete="name" placeholder="Your name"></div><div class="input-wrap"><label class="input-label" for="email">Email</label><input id="email" type="email" name="email" required autocomplete="email" placeholder="you@example.com"></div></div>
+        <div class="input-wrap"><label class="input-label" for="subject">Subject</label><input id="subject" name="subject" required placeholder="What should we talk about?"></div>
+        <div class="input-wrap"><label class="input-label" for="message">Message</label><textarea id="message" name="message" required placeholder="Tell me what you're building..."></textarea></div>
+        <div class="flex flex-wrap items-center justify-between gap-3"><p class="font-mono text-[9px] uppercase tracking-[.14em] text-white/25">Sent straight to my inbox, no backend</p><div class="flex gap-2"><label for="contact-toggle" class="cursor-pointer rounded-full border border-white/10 px-5 py-3 text-sm text-white/60 transition hover:border-white/20 hover:text-white">Cancel</label><button type="submit" class="rounded-full bg-gold px-6 py-3 text-sm font-bold text-ink transition duration-500 hover:-translate-y-0.5 hover:shadow-gold">Send message ↗</button></div></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Easter egg #2: Konami code overlay. The footer "sys_" terminal is egg #1. -->
+  <div id="easter-egg" class="fixed inset-0 z-[200] grid place-items-center bg-black/85 opacity-0 pointer-events-none transition-opacity duration-500">
+    <div class="liquid-glass rounded-[1.75rem] p-10 text-center max-w-sm mx-6">
+      <p class="font-mono text-[10px] uppercase tracking-[.2em] text-gold">achievement_unlocked</p>
+      <p class="mt-4 text-3xl font-semibold text-white">You found it.</p>
+      <p class="mt-3 text-sm leading-6 text-white/50">Curiosity is the whole point of this site. Now go build something of your own — I'll be doing the same.</p>
+      <button id="close-egg" class="mt-7 rounded-full border border-gold/40 px-5 py-2.5 text-sm text-gold transition hover:border-gold hover:bg-gold/10">Close</button>
+    </div>
+  </div>
+
+  <footer class="border-t border-white/10 px-5 py-8 sm:px-8 lg:px-12"><div class="mx-auto flex max-w-7xl flex-col gap-5 sm:flex-row sm:items-center sm:justify-between"><div><p class="text-sm font-semibold text-white">Gourav Nirankari</p><p class="mt-1 text-xs text-white/30">Built with curiosity, HTML, CSS & Tailwind.</p></div><div class="flex flex-wrap items-center gap-5 text-xs text-white/35"><a class="footer-link" href="https://github.com/GouravNirankari" target="_blank" rel="noopener noreferrer">GitHub</a><a class="footer-link" href="https://www.linkedin.com/in/gourav-nirankari-96877b345/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="footer-link" href="https://www.instagram.com/http_gouravv/" target="_blank" rel="noopener noreferrer">Instagram</a><a class="footer-link" href="https://leetcode.com/u/Gourav_Nirankari/" target="_blank" rel="noopener noreferrer">LeetCode</a><details class="relative"><summary class="cursor-pointer list-none text-gold/70 transition hover:text-gold">sys_</summary><div class="terminal-pop absolute bottom-8 right-0 z-20 w-72 rounded-xl border border-gold/20 bg-[#0b0b0a] p-4 font-mono text-[10px] leading-6 text-white/50 shadow-2xl"><p><span class="text-gold">$</span> whoami</p><p class="text-white">gourav@builder</p><p class="mt-2"><span class="text-gold">$</span> status</p><p class="text-green-400">curious / building / shipping</p><p class="mt-2"><span class="text-gold">$</span> next</p><p>learn → build → repeat</p></div></details></div></div></footer>
+
+<script>
+  /* This file is optional polish, not the core project. Every section above
+     already works as plain HTML + CSS (nav, mobile menu and the contact
+     modal all use the checkbox trick, no JS involved). Everything below
+     only adds motion and a couple of small conveniences on top of that. */
+
+  document.documentElement.classList.remove('no-js');
+
+  /* ---------- custom cursor: a dot on the pointer, a ring that eases
+     toward it, and a small "grow" state over anything clickable ---------- */
+  const dot = document.getElementById('cursor-dot');
+  const ring = document.getElementById('cursor-ring');
+  let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+  let ringX = mouseX, ringY = mouseY;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX; mouseY = e.clientY;
+    dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%,-50%)`;
+  });
+
+  (function animateRing() {
+    ringX += (mouseX - ringX) * 0.18;
+    ringY += (mouseY - ringY) * 0.18;
+    ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%,-50%)`;
+    requestAnimationFrame(animateRing);
+  })();
+
+  document.querySelectorAll('a, button, label, .pill, .interest').forEach((el) => {
+    el.addEventListener('mouseenter', () => ring.classList.add('is-active'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('is-active'));
+  });
+
+  /* ---------- magnetic buttons: nudge toward the pointer within their
+     own bounds, then spring back on mouseleave ---------- */
+  document.querySelectorAll('.magnetic-btn').forEach((btn) => {
+    btn.addEventListener('mousemove', (e) => {
+      const r = btn.getBoundingClientRect();
+      const x = e.clientX - r.left - r.width / 2;
+      const y = e.clientY - r.top - r.height / 2;
+      btn.style.transform = `translate(${x * 0.25}px, ${y * 0.35}px)`;
+    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+  });
+
+  /* ---------- scroll progress bar ---------- */
+  const progressBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+    progressBar.style.width = scrolled + '%';
+  }, { passive: true });
+
+  /* ---------- scroll-triggered reveal (works in every browser) ---------- */
+  const revealEls = document.querySelectorAll('.scroll-reveal, .scroll-slide-left, .scroll-slide-right');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach((el) => io.observe(el));
+
+  /* ---------- contact form: progressive enhancement over FormSubmit.
+     Without JS this form already works — it posts to FormSubmit and the
+     visitor lands on FormSubmit's thank-you page. With JS, it submits in
+     the background so the modal can show a result without leaving the
+     page. ---------- */
+  const contactForm = document.querySelector('#contact-toggle ~ .contact-modal form');
+  if (contactForm) {
+    let resultEl = contactForm.querySelector('.form-result');
+    if (!resultEl) {
+      resultEl = document.createElement('p');
+      resultEl.className = 'form-result text-sm text-center min-h-[1.25rem]';
+      contactForm.appendChild(resultEl);
+    }
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalLabel = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+      resultEl.textContent = '';
+      resultEl.classList.remove('text-gold', 'text-red-400');
+      try {
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(contactForm),
+        });
+        if (!res.ok) throw new Error('bad response');
+        resultEl.textContent = "Sent — thanks! I'll get back to you soon.";
+        resultEl.classList.add('text-gold');
+        contactForm.reset();
+      } catch (err) {
+        resultEl.textContent = 'Something went wrong — email me directly at gouravnirankari4@gmail.com';
+        resultEl.classList.add('text-red-400');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
+    });
+  }
+
+  /* ---------- easter egg: Konami code ---------- */
+  const KONAMI = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+  let progress = 0;
+  window.addEventListener('keydown', (e) => {
+    const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    progress = (key === KONAMI[progress]) ? progress + 1 : (key === KONAMI[0] ? 1 : 0);
+    if (progress === KONAMI.length) {
+      progress = 0;
+      const egg = document.getElementById('easter-egg');
+      egg.classList.remove('opacity-0', 'pointer-events-none');
+    }
+  });
+  document.getElementById('close-egg').addEventListener('click', () => {
+    document.getElementById('easter-egg').classList.add('opacity-0', 'pointer-events-none');
+  });
+
+  /* ---------- easter egg: a message for anyone reading the console ---------- */
+  console.log(
+    '%c$ whoami\n%cGourav Nirankari — builder, not just a coder.\nYou opened the console, so you\'re exactly the kind of curious person this site was built for. Say hi: gouravnirankari4@gmail.com',
+    'color:#ffdb91;font-family:monospace;font-size:14px;font-weight:bold;',
+    'color:#e2bd70;font-family:monospace;font-size:12px;'
+  );
+</script>
+</body>
+</html>
